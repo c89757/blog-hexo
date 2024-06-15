@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2024/05/11/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91-%E8%87%AA%E5%BB%BA%E6%A2%AF%E5%AD%90/</loc>
+    <loc>https://c89757.github.io/2024/05/11/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91-%E8%87%AA%E5%BB%BA%E6%A2%AF%E5%AD%90/</loc>
     
     <lastmod>2024-05-11</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2024/04/24/InnoDB-FullTextIndex/</loc>
+    <loc>https://c89757.github.io/2024/04/24/InnoDB-FullTextIndex/</loc>
     
     <lastmod>2024-04-24</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2024/04/23/XA%E4%BA%8B%E5%8A%A1%E4%B8%8E%E4%B8%A4%E9%98%B6%E6%AE%B5%E6%8F%90%E4%BA%A4/</loc>
+    <loc>https://c89757.github.io/2024/04/23/XA%E4%BA%8B%E5%8A%A1%E4%B8%8E%E4%B8%A4%E9%98%B6%E6%AE%B5%E6%8F%90%E4%BA%A4/</loc>
     
     <lastmod>2024-04-23</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2024/04/21/MySql%E7%9A%84%E9%94%81/</loc>
+    <loc>https://c89757.github.io/2024/04/21/MySql%E7%9A%84%E9%94%81/</loc>
     
     <lastmod>2024-04-22</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/</loc>
+    <loc>https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/</loc>
     
     <lastmod>2024-04-21</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2023/09/26/mysql%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB%E4%B8%8EMVVC/</loc>
+    <loc>https://c89757.github.io/2023/09/26/mysql%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB%E4%B8%8EMVVC/</loc>
     
     <lastmod>2024-04-20</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2024/04/17/MySql%E5%A2%9E%E5%8A%A0varchar%E9%95%BF%E5%BA%A6/</loc>
+    <loc>https://c89757.github.io/2024/04/17/MySql%E5%A2%9E%E5%8A%A0varchar%E9%95%BF%E5%BA%A6/</loc>
     
     <lastmod>2024-04-17</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2024/04/14/MySql-BufferPool/</loc>
+    <loc>https://c89757.github.io/2024/04/14/MySql-BufferPool/</loc>
     
     <lastmod>2024-04-14</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/11/05/%E8%A1%A8%E7%A9%BA%E9%97%B4/</loc>
+    <loc>https://c89757.github.io/2022/11/05/%E8%A1%A8%E7%A9%BA%E9%97%B4/</loc>
     
     <lastmod>2024-04-13</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2024/03/30/%E7%A8%8B%E5%BA%8FOOM%E6%97%B6soft-reference%E6%B2%A1%E6%9C%89%E8%A2%AB%E5%9B%9E%E6%94%B6/</loc>
+    <loc>https://c89757.github.io/2024/03/30/%E7%A8%8B%E5%BA%8FOOM%E6%97%B6soft-reference%E6%B2%A1%E6%9C%89%E8%A2%AB%E5%9B%9E%E6%94%B6/</loc>
     
     <lastmod>2024-03-30</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2023/02/05/G1-GC/</loc>
+    <loc>https://c89757.github.io/2023/02/05/G1-GC/</loc>
     
     <lastmod>2024-03-11</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2024/03/11/%E8%AE%B0-%E5%8D%87%E7%BA%A7mariadb-java-client%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://c89757.github.io/2024/03/11/%E8%AE%B0-%E5%8D%87%E7%BA%A7mariadb-java-client%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2024-03-11</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/11/13/Mysql%E5%AD%90%E6%9F%A5%E8%AF%A2/</loc>
+    <loc>https://c89757.github.io/2022/11/13/Mysql%E5%AD%90%E6%9F%A5%E8%AF%A2/</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2023/08/16/jvm%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://c89757.github.io/2023/08/16/jvm%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2023-08-19</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2023/08/09/%E7%BA%BF%E4%B8%8Acpu%E9%A3%99%E5%8D%87%E6%8E%92%E6%9F%A5/</loc>
+    <loc>https://c89757.github.io/2023/08/09/%E7%BA%BF%E4%B8%8Acpu%E9%A3%99%E5%8D%87%E6%8E%92%E6%9F%A5/</loc>
     
     <lastmod>2023-08-17</lastmod>
     
@@ -137,7 +137,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/06/09/maven%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99-Malformed-uxxx-encoding/</loc>
+    <loc>https://c89757.github.io/2022/06/09/maven%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99-Malformed-uxxx-encoding/</loc>
     
     <lastmod>2023-08-09</lastmod>
     
@@ -146,7 +146,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2023/03/09/%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97/</loc>
+    <loc>https://c89757.github.io/2023/03/09/%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97/</loc>
     
     <lastmod>2023-03-09</lastmod>
     
@@ -155,7 +155,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2023/02/20/Mysql%E7%B4%A2%E5%BC%95%E5%90%88%E5%B9%B6/</loc>
+    <loc>https://c89757.github.io/2023/02/20/Mysql%E7%B4%A2%E5%BC%95%E5%90%88%E5%B9%B6/</loc>
     
     <lastmod>2023-02-20</lastmod>
     
@@ -164,7 +164,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2023/02/18/innodb%E6%95%B0%E6%8D%AE%E9%A1%B5/</loc>
+    <loc>https://c89757.github.io/2023/02/18/innodb%E6%95%B0%E6%8D%AE%E9%A1%B5/</loc>
     
     <lastmod>2023-02-19</lastmod>
     
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/11/15/explain%E8%AF%A6%E8%A7%A3/</loc>
+    <loc>https://c89757.github.io/2022/11/15/explain%E8%AF%A6%E8%A7%A3/</loc>
     
     <lastmod>2023-02-19</lastmod>
     
@@ -182,7 +182,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2023/01/28/%E8%AE%B0-%E5%B9%B6%E5%8F%91%E6%83%85%E5%86%B5%E4%B8%8Bmysql%E6%AD%BB%E9%94%81%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://c89757.github.io/2023/01/28/%E8%AE%B0-%E5%B9%B6%E5%8F%91%E6%83%85%E5%86%B5%E4%B8%8Bmysql%E6%AD%BB%E9%94%81%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2023-01-28</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/12/04/volatile%E5%85%B3%E9%94%AE%E5%AD%97/</loc>
+    <loc>https://c89757.github.io/2022/12/04/volatile%E5%85%B3%E9%94%AE%E5%AD%97/</loc>
     
     <lastmod>2022-12-04</lastmod>
     
@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/12/04/JUC/</loc>
+    <loc>https://c89757.github.io/2022/12/04/JUC/</loc>
     
     <lastmod>2022-12-04</lastmod>
     
@@ -209,7 +209,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/11/07/%E6%9F%A5%E8%AF%A2%E7%9A%84%E6%88%90%E6%9C%AC/</loc>
+    <loc>https://c89757.github.io/2022/11/07/%E6%9F%A5%E8%AF%A2%E7%9A%84%E6%88%90%E6%9C%AC/</loc>
     
     <lastmod>2022-11-30</lastmod>
     
@@ -218,7 +218,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/11/30/mysql%E6%9F%A5%E7%9C%8B%E4%BA%8B%E5%8A%A1%E5%8A%A0%E9%94%81%E6%83%85%E5%86%B5/</loc>
+    <loc>https://c89757.github.io/2022/11/30/mysql%E6%9F%A5%E7%9C%8B%E4%BA%8B%E5%8A%A1%E5%8A%A0%E9%94%81%E6%83%85%E5%86%B5/</loc>
     
     <lastmod>2022-11-30</lastmod>
     
@@ -227,7 +227,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/06/18/Springboot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D/</loc>
+    <loc>https://c89757.github.io/2022/06/18/Springboot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D/</loc>
     
     <lastmod>2022-06-19</lastmod>
     
@@ -236,7 +236,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/06/01/restTemplate/</loc>
+    <loc>https://c89757.github.io/2022/06/01/restTemplate/</loc>
     
     <lastmod>2022-06-09</lastmod>
     
@@ -245,7 +245,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/03/24/%E5%A0%86%E6%8E%92%E5%BA%8F/</loc>
+    <loc>https://c89757.github.io/2022/03/24/%E5%A0%86%E6%8E%92%E5%BA%8F/</loc>
     
     <lastmod>2022-03-25</lastmod>
     
@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/01/15/Synchronized%E8%AF%A6%E8%A7%A3/</loc>
+    <loc>https://c89757.github.io/2022/01/15/Synchronized%E8%AF%A6%E8%A7%A3/</loc>
     
     <lastmod>2022-03-25</lastmod>
     
@@ -263,7 +263,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2022/01/06/Netty/</loc>
+    <loc>https://c89757.github.io/2022/01/06/Netty/</loc>
     
     <lastmod>2022-03-25</lastmod>
     
@@ -272,7 +272,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2021/12/17/Sychronized%E5%85%B3%E9%94%AE%E5%AD%97-monitorenter%E4%B8%8Emonitorexit/</loc>
+    <loc>https://c89757.github.io/2021/12/17/Sychronized%E5%85%B3%E9%94%AE%E5%AD%97-monitorenter%E4%B8%8Emonitorexit/</loc>
     
     <lastmod>2022-01-15</lastmod>
     
@@ -281,7 +281,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2021/12/22/%E5%85%B3%E4%BA%8Ecount()/</loc>
+    <loc>https://c89757.github.io/2021/12/22/%E5%85%B3%E4%BA%8Ecount()/</loc>
     
     <lastmod>2021-12-22</lastmod>
     
@@ -290,7 +290,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/2021/12/16/gitee+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://c89757.github.io/2021/12/16/gitee+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2021-12-17</lastmod>
     
@@ -299,7 +299,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/index.html</loc>
+    <loc>https://c89757.github.io/tags/index.html</loc>
     
     <lastmod>2021-12-16</lastmod>
     
@@ -308,7 +308,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/repository/index.html</loc>
+    <loc>https://c89757.github.io/repository/index.html</loc>
     
     <lastmod>2021-12-16</lastmod>
     
@@ -317,7 +317,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/links/index.html</loc>
+    <loc>https://c89757.github.io/categories/index.html</loc>
     
     <lastmod>2021-12-16</lastmod>
     
@@ -326,7 +326,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/categories/index.html</loc>
+    <loc>https://c89757.github.io/links/index.html</loc>
     
     <lastmod>2021-12-16</lastmod>
     
@@ -335,7 +335,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/books/index.html</loc>
+    <loc>https://c89757.github.io/about/index.html</loc>
     
     <lastmod>2021-12-16</lastmod>
     
@@ -344,7 +344,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/about/index.html</loc>
+    <loc>https://c89757.github.io/books/index.html</loc>
     
     <lastmod>2021-12-16</lastmod>
     
@@ -353,7 +353,7 @@
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/404.html</loc>
+    <loc>https://c89757.github.io/404.html</loc>
     
     <lastmod>2021-12-16</lastmod>
     
@@ -363,7 +363,7 @@
   
 
   <url>
-    <loc>http://c89757.gitee.io/colinstar</loc>
+    <loc>https://c89757.github.io/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -371,126 +371,126 @@
 
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/jvm/</loc>
+    <loc>https://c89757.github.io/tags/jvm/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/mysql/</loc>
+    <loc>https://c89757.github.io/tags/MySql/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/JUC/</loc>
+    <loc>https://c89757.github.io/tags/mysql/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>https://c89757.github.io/tags/JUC/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/others/</loc>
+    <loc>https://c89757.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/maven/</loc>
+    <loc>https://c89757.github.io/tags/others/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/questions/</loc>
+    <loc>https://c89757.github.io/tags/maven/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/spring/</loc>
+    <loc>https://c89757.github.io/tags/questions/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/%E5%A0%86/</loc>
+    <loc>https://c89757.github.io/tags/spring/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://c89757.github.io/tags/%E5%A0%86/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/Mysql/</loc>
+    <loc>https://c89757.github.io/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/java/</loc>
+    <loc>https://c89757.github.io/tags/Mysql/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/springboot/</loc>
+    <loc>https://c89757.github.io/tags/other/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/nio/</loc>
+    <loc>https://c89757.github.io/tags/java/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/netty/</loc>
+    <loc>https://c89757.github.io/tags/GC/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/GC/</loc>
+    <loc>https://c89757.github.io/tags/springboot/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/MySql/</loc>
+    <loc>https://c89757.github.io/tags/nio/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/tags/other/</loc>
+    <loc>https://c89757.github.io/tags/netty/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -499,77 +499,77 @@
 
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/categories/jvm/</loc>
+    <loc>https://c89757.github.io/categories/jvm/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/categories/mysql/</loc>
+    <loc>https://c89757.github.io/categories/MySql/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/categories/JUC/</loc>
+    <loc>https://c89757.github.io/categories/mysql/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/categories/others/</loc>
+    <loc>https://c89757.github.io/categories/JUC/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://c89757.github.io/categories/others/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/categories/Mysql/</loc>
+    <loc>https://c89757.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/categories/java/</loc>
+    <loc>https://c89757.github.io/categories/Mysql/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/categories/springboot/</loc>
+    <loc>https://c89757.github.io/categories/%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/categories/netty/</loc>
+    <loc>https://c89757.github.io/categories/java/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/categories/MySql/</loc>
+    <loc>https://c89757.github.io/categories/springboot/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://c89757.gitee.io/colinstar/categories/%E7%BD%91%E7%BB%9C/</loc>
+    <loc>https://c89757.github.io/categories/netty/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

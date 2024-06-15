@@ -21,40 +21,40 @@
   <meta name="description" content="binlog 二进制日志，记录了数据库发生的变化。如新建了一个数据库或者表、表结构发生改变、表中的数据发生了变化时都会记录相应的binlog日志。  主要作用  用于复制  MySql主从复制就依赖binlog，主服务器将数据同步给各个从服务器  用于恢复  数据误删后可以通过binlog恢复 配置可以通过如下命令查看是否当前服务器是否开启了binlog 1show variables like">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySql的日志">
-<meta property="og:url" content="http://c89757.gitee.io/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/index.html">
+<meta property="og:url" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="binlog 二进制日志，记录了数据库发生的变化。如新建了一个数据库或者表、表结构发生改变、表中的数据发生了变化时都会记录相应的binlog日志。  主要作用  用于复制  MySql主从复制就依赖binlog，主服务器将数据同步给各个从服务器  用于恢复  数据误删后可以通过binlog恢复 配置可以通过如下命令查看是否当前服务器是否开启了binlog 1show variables like">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240414192757001.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240415224554545.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240415225620019.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240415233226592.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240417000328320.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240417232524707.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240418222559688.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240418223900310.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240418233324254.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240419000257852.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420135406839.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420135942889.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420141005150.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420142227528.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420143626870.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420144120007.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420144551844.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420150428571.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420154213392.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420215420389.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420215801433.png">
-<meta property="og:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420230059192.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240414192757001.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240415224554545.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240415225620019.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240415233226592.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240417000328320.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240417232524707.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240418222559688.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240418223900310.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240418233324254.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240419000257852.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420135406839.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420135942889.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420141005150.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420142227528.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420143626870.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420144120007.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420144551844.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420150428571.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420154213392.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420215420389.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420215801433.png">
+<meta property="og:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240420230059192.png">
 <meta property="article:published_time" content="2024-04-14T10:06:02.000Z">
 <meta property="article:modified_time" content="2024-04-21T07:23:27.958Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="MySql">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://c89757.gitee.io/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240414192757001.png">
+<meta name="twitter:image" content="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images/MySql的日志/image-20240414192757001.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://c89757.gitee.io/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/index.html">
+  <link rel="canonical" href="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -62,7 +62,7 @@
     <link rel="icon" href="/favicon.png" type="image/x-icon">
   
   
-<link rel="stylesheet" href="/colinstar/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 
   
   
@@ -81,7 +81,7 @@
       
       <div class="profile-block text-center">
         <a id="avatar" href="https://gitee.com/c89757" target="_blank">
-          <img class="img-circle img-rotate" src="/colinstar/images/avatar.jpg" width="200" height="200">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
         </a>
         <h2 id="name" class="hidden-xs hidden-sm">colin</h2>
         <h3 id="title" class="hidden-xs hidden-sm hidden-md">悟已往之不谏，知来者之可追</h3>
@@ -125,7 +125,7 @@
         
         
         <li class="menu-item menu-item-home">
-          <a href="/colinstar/.">
+          <a href="/.">
             
             <i class="icon icon-home-fill"></i>
             
@@ -135,7 +135,7 @@
         
         
         <li class="menu-item menu-item-archives">
-          <a href="/colinstar/archives">
+          <a href="/archives">
             
             <i class="icon icon-archives-fill"></i>
             
@@ -145,7 +145,7 @@
         
         
         <li class="menu-item menu-item-categories">
-          <a href="/colinstar/categories">
+          <a href="/categories">
             
             <i class="icon icon-folder"></i>
             
@@ -155,7 +155,7 @@
         
         
         <li class="menu-item menu-item-tags">
-          <a href="/colinstar/tags">
+          <a href="/tags">
             
             <i class="icon icon-tags"></i>
             
@@ -165,7 +165,7 @@
         
         
         <li class="menu-item menu-item-repository">
-          <a href="/colinstar/repository">
+          <a href="/repository">
             
             <i class="icon icon-project"></i>
             
@@ -175,7 +175,7 @@
         
         
         <li class="menu-item menu-item-books">
-          <a href="/colinstar/books">
+          <a href="/books">
             
             <i class="icon icon-book-fill"></i>
             
@@ -185,7 +185,7 @@
         
         
         <li class="menu-item menu-item-links">
-          <a href="/colinstar/links">
+          <a href="/links">
             
             <i class="icon icon-friendship"></i>
             
@@ -195,7 +195,7 @@
         
         
         <li class="menu-item menu-item-about">
-          <a href="/colinstar/about">
+          <a href="/about">
             
             <i class="icon icon-cup-fill"></i>
             
@@ -216,7 +216,7 @@
         
         <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
         
-        <li><a href="/colinstar/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
         
     </ul>
 
@@ -244,7 +244,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/colinstar/categories/JUC/">JUC</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/colinstar/categories/MySql/">MySql</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/colinstar/categories/Mysql/">Mysql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/colinstar/categories/java/">java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/colinstar/categories/jvm/">jvm</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/colinstar/categories/mysql/">mysql</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/colinstar/categories/netty/">netty</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/colinstar/categories/others/">others</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/colinstar/categories/springboot/">springboot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/colinstar/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/colinstar/categories/%E7%BD%91%E7%BB%9C/">网络</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JUC/">JUC</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/jvm/">jvm</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/netty/">netty</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/others/">others</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/springboot/">springboot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -254,7 +254,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/GC/" rel="tag">GC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/JUC/" rel="tag">JUC</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/MySql/" rel="tag">MySql</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/Mysql/" rel="tag">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/java/" rel="tag">java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/jvm/" rel="tag">jvm</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/maven/" rel="tag">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/mysql/" rel="tag">mysql</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/netty/" rel="tag">netty</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/nio/" rel="tag">nio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/other/" rel="tag">other</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/others/" rel="tag">others</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/questions/" rel="tag">questions</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/spring/" rel="tag">spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/springboot/" rel="tag">springboot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/%E5%A0%86/" rel="tag">堆</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/colinstar/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag">排序算法</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/GC/" rel="tag">GC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JUC/" rel="tag">JUC</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySql/" rel="tag">MySql</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/" rel="tag">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/netty/" rel="tag">netty</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nio/" rel="tag">nio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/other/" rel="tag">other</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/others/" rel="tag">others</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/questions/" rel="tag">questions</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring/" rel="tag">spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A0%86/" rel="tag">堆</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag">排序算法</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -264,7 +264,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/colinstar/tags/GC/" style="font-size: 13px;">GC</a> <a href="/colinstar/tags/JUC/" style="font-size: 13.6px;">JUC</a> <a href="/colinstar/tags/MySql/" style="font-size: 13.8px;">MySql</a> <a href="/colinstar/tags/Mysql/" style="font-size: 13.2px;">Mysql</a> <a href="/colinstar/tags/java/" style="font-size: 13.2px;">java</a> <a href="/colinstar/tags/jvm/" style="font-size: 13.4px;">jvm</a> <a href="/colinstar/tags/maven/" style="font-size: 13px;">maven</a> <a href="/colinstar/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/colinstar/tags/netty/" style="font-size: 13px;">netty</a> <a href="/colinstar/tags/nio/" style="font-size: 13px;">nio</a> <a href="/colinstar/tags/other/" style="font-size: 13px;">other</a> <a href="/colinstar/tags/others/" style="font-size: 13px;">others</a> <a href="/colinstar/tags/questions/" style="font-size: 13.2px;">questions</a> <a href="/colinstar/tags/spring/" style="font-size: 13px;">spring</a> <a href="/colinstar/tags/springboot/" style="font-size: 13px;">springboot</a> <a href="/colinstar/tags/%E5%A0%86/" style="font-size: 13px;">堆</a> <a href="/colinstar/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 13.6px;">多线程</a> <a href="/colinstar/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 13px;">排序算法</a>
+      <a href="/tags/GC/" style="font-size: 13px;">GC</a> <a href="/tags/JUC/" style="font-size: 13.6px;">JUC</a> <a href="/tags/MySql/" style="font-size: 13.8px;">MySql</a> <a href="/tags/Mysql/" style="font-size: 13.2px;">Mysql</a> <a href="/tags/java/" style="font-size: 13.2px;">java</a> <a href="/tags/jvm/" style="font-size: 13.4px;">jvm</a> <a href="/tags/maven/" style="font-size: 13px;">maven</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/netty/" style="font-size: 13px;">netty</a> <a href="/tags/nio/" style="font-size: 13px;">nio</a> <a href="/tags/other/" style="font-size: 13px;">other</a> <a href="/tags/others/" style="font-size: 13px;">others</a> <a href="/tags/questions/" style="font-size: 13.2px;">questions</a> <a href="/tags/spring/" style="font-size: 13px;">spring</a> <a href="/tags/springboot/" style="font-size: 13px;">springboot</a> <a href="/tags/%E5%A0%86/" style="font-size: 13px;">堆</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 13.6px;">多线程</a> <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 13px;">排序算法</a>
     </div>
   </div>
 
@@ -273,7 +273,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2024/05/">五月 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2024/04/">四月 2024</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2024/03/">三月 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2023/09/">九月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2023/08/">八月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2023/03/">三月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2023/02/">二月 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2023/01/">一月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2022/12/">十二月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2022/11/">十一月 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2022/06/">六月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2022/01/">一月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/colinstar/archives/2021/12/">十二月 2021</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">五月 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -289,10 +289,10 @@
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/colinstar/categories/%E7%BD%91%E7%BB%9C/">网络</a>
+                <a class="category-link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
               </p>
               <p class="item-title">
-                <a href="/colinstar/2024/05/11/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91-%E8%87%AA%E5%BB%BA%E6%A2%AF%E5%AD%90/" class="title">科学上网-自建梯子</a>
+                <a href="/2024/05/11/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91-%E8%87%AA%E5%BB%BA%E6%A2%AF%E5%AD%90/" class="title">科学上网-自建梯子</a>
               </p>
               <p class="item-date">
                 <time datetime="2024-05-11T12:12:58.000Z" itemprop="datePublished">2024-05-11</time>
@@ -304,10 +304,10 @@
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/colinstar/categories/MySql/">MySql</a>
+                <a class="category-link" href="/categories/MySql/">MySql</a>
               </p>
               <p class="item-title">
-                <a href="/colinstar/2024/04/24/InnoDB-FullTextIndex/" class="title">InnoDB-FullTextIndex</a>
+                <a href="/2024/04/24/InnoDB-FullTextIndex/" class="title">InnoDB-FullTextIndex</a>
               </p>
               <p class="item-date">
                 <time datetime="2024-04-24T11:24:50.000Z" itemprop="datePublished">2024-04-24</time>
@@ -319,10 +319,10 @@
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/colinstar/categories/mysql/">mysql</a>
+                <a class="category-link" href="/categories/mysql/">mysql</a>
               </p>
               <p class="item-title">
-                <a href="/colinstar/2024/04/23/XA%E4%BA%8B%E5%8A%A1%E4%B8%8E%E4%B8%A4%E9%98%B6%E6%AE%B5%E6%8F%90%E4%BA%A4/" class="title">XA事务与两阶段提交</a>
+                <a href="/2024/04/23/XA%E4%BA%8B%E5%8A%A1%E4%B8%8E%E4%B8%A4%E9%98%B6%E6%AE%B5%E6%8F%90%E4%BA%A4/" class="title">XA事务与两阶段提交</a>
               </p>
               <p class="item-date">
                 <time datetime="2024-04-22T16:15:30.000Z" itemprop="datePublished">2024-04-23</time>
@@ -334,10 +334,10 @@
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/colinstar/categories/MySql/">MySql</a>
+                <a class="category-link" href="/categories/MySql/">MySql</a>
               </p>
               <p class="item-title">
-                <a href="/colinstar/2024/04/21/MySql%E7%9A%84%E9%94%81/" class="title">MySql的锁</a>
+                <a href="/2024/04/21/MySql%E7%9A%84%E9%94%81/" class="title">MySql的锁</a>
               </p>
               <p class="item-date">
                 <time datetime="2024-04-21T07:23:11.000Z" itemprop="datePublished">2024-04-21</time>
@@ -349,10 +349,10 @@
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/colinstar/categories/MySql/">MySql</a>
+                <a class="category-link" href="/categories/MySql/">MySql</a>
               </p>
               <p class="item-title">
-                <a href="/colinstar/2024/04/17/MySql%E5%A2%9E%E5%8A%A0varchar%E9%95%BF%E5%BA%A6/" class="title">MySql增加varchar长度</a>
+                <a href="/2024/04/17/MySql%E5%A2%9E%E5%8A%A0varchar%E9%95%BF%E5%BA%A6/" class="title">MySql增加varchar长度</a>
               </p>
               <p class="item-date">
                 <time datetime="2024-04-17T11:29:10.000Z" itemprop="datePublished">2024-04-17</time>
@@ -397,20 +397,20 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/" class="article-date">
+	<a href="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/" class="article-date">
 	  <time datetime="2024-04-14T10:06:02.000Z" itemprop="datePublished">2024-04-14</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/colinstar/categories/MySql/">MySql</a>
+    <a class="article-category-link" href="/categories/MySql/">MySql</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/colinstar/tags/MySql/" rel="tag">MySql</a>
+	<a class="article-tag-link-link" href="/tags/MySql/" rel="tag">MySql</a>
   </span>
 
 
@@ -423,7 +423,7 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
@@ -490,7 +490,7 @@
 </blockquote>
 <h2 id="日志格式"><a href="#日志格式" class="headerlink" title="日志格式"></a>日志格式</h2><p><code>redolog</code>本质上只是记录了一下事务对数据库进行了哪些修改。</p>
 <p><code>MySql</code>针对不同的修改场景，定义了多种类型的redo日志，但大部分类型的redo日志都有以下这种通用格式</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240414192757001.png" alt="image-20240414192757001"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240414192757001.png" alt="image-20240414192757001"></p>
 <ul>
 <li>type：这条redo日志的类型</li>
 <li>space ID：表空间ID</li>
@@ -506,9 +506,9 @@
 <li><code>MLOG_WRITE_STRING</code>（type字段对应的十进制数字为30）：表示在某个页面偏移量处写入1个 <code>字节序列</code> 的redo日志类型</li>
 </ul>
 <p>对于<code>MLOG_ n BYTE</code>格式的日志，他们的通用日志格式如下：</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240415224554545.png" alt="image-20240415224554545"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240415224554545.png" alt="image-20240415224554545"></p>
 <p>对于``MLOG_WRITE_STRING`类型的日志来说，格式都差不多，只不过具体数据中包含的字节数量不同。格式如下：</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240415225620019.png" alt="image-20240415225620019"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240415225620019.png" alt="image-20240415225620019"></p>
 <p><code>MLOG_WRITE_STRING</code>类型的<code>redolog</code>因为不确定写入的具体数据占用多少字节，所以需要在日志结构中添加一个<code>len</code>字段。</p>
 <h2 id="复杂的日志类型"><a href="#复杂的日志类型" class="headerlink" title="复杂的日志类型"></a>复杂的日志类型</h2><p>对于一个<code>INSERT</code>语句来说，他对B+树的影响如下</p>
 <ol>
@@ -528,7 +528,7 @@
 </li>
 </ul>
 <p><code>MLOG_COMP_REC_INSERT</code>类型的<code>redolog</code>格式如下：</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240415233226592.png" alt="image-20240415233226592"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240415233226592.png" alt="image-20240415233226592"></p>
 <h2 id="Mini-Transication"><a href="#Mini-Transication" class="headerlink" title="Mini-Transication"></a>Mini-Transication</h2><ul>
 <li>以组的形式写入<code>redolog</code></li>
 </ul>
@@ -540,7 +540,7 @@
 </blockquote>
 <h2 id="redo-log-block"><a href="#redo-log-block" class="headerlink" title="redo log block"></a>redo log block</h2><p>一个<code>MTR</code>（<code>Mini-Transication</code>）生成的<code>redo</code>日志都放在了大小为512字节的页中，称为<code>block</code>。</p>
 <p><code>redo block</code>的格式示意图：</p>
-<img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240417000328320.png" alt="image-20240417000328320" style="zoom:80%;">
+<img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240417000328320.png" alt="image-20240417000328320" style="zoom:80%;">
 
 
 
@@ -553,7 +553,7 @@
 </ul>
 <h2 id="log-buffer"><a href="#log-buffer" class="headerlink" title="log buffer"></a>log buffer</h2><p>​    写入<code>redo</code>日志时，其实也是写在<code>redo log buffer</code>日志缓冲区的。</p>
 <p>​    <code>MySql</code>服务器在启动时就向操作系统申请了一大片连续的内存空间，称为<code>redo log buffer</code>日志缓冲区。这片连续的内存空间被划分若干连续的<code>redo log block</code>。</p>
-<img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240417232524707.png" alt="image-20240417232524707">
+<img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240417232524707.png" alt="image-20240417232524707">
 
 <p>​    向<code>log buffer</code>中写入undo日志的过程中是顺序写入的，也就是先往前面的<code>block</code>中写，当该<code>block</code>的空闲空间用完之后再往下一个<code>block</code>中写。<code>MySql</code>维护了一个全局变量<code>buf_free</code>，记录偏移量，指明后续写入的<code>redo</code>日志应该写到<code>log buffer</code>中的哪个位置。</p>
 <p>​    一个<code>MTR</code>执行过程中可能产生若干条<code>redo</code>日志，这些<code>redo</code>是一个不可分割的组，所以并不是每生成一条<code>redo</code>日志就该将其插入到<code>log buffer</code>中，而是将每个<code>MTR</code>运行过程中产生的日志暂存到一个地方；当该<code>MTR</code>结束时，再将过程中产生的一组<code>redo</code>日志全部复制到<code>log buffer</code>中。</p>
@@ -596,7 +596,7 @@
 <li>从第2048字节往后的字节用来存储<code>log buffer</code>中<code>block</code>镜像</li>
 </ul>
 <p>前4个<code>block</code>的结构如下：</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240418222559688.png" alt="image-20240418222559688"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240418222559688.png" alt="image-20240418222559688"></p>
 <p><strong>log file header</strong></p>
 <ul>
 <li><code>LOG_HEADER_FORMAT</code>：4字节，redo日志的版本，在<code>MySql5.7</code>中基本都为1</li>
@@ -606,7 +606,7 @@
 <li><code>LOG_BLOCK_CHECKSUM</code>：4字节，本<code>block</code>的校验值；所有的<code>block</code>都有该值，</li>
 </ul>
 <p><strong>checkpoint1</strong></p>
-<img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240418223900310.png" alt="image-20240418223900310">
+<img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240418223900310.png" alt="image-20240418223900310">
 
 <ul>
 <li><code>LOG_CHECKPOINT_NO</code>：8字节，服务器执行checkpoint编号，每执行一次<code>checkpoint</code>，该值就加1</li>
@@ -621,7 +621,7 @@
 <p>向<code>log buffer</code>中不断写入日志，其实是以<code>MTR</code>生成的一组<code>redo</code>日志为单位写入的，而且实际上是把日志写在了<code>log buffe body</code>处。但是在统计<code>lsn</code>的增长值时，是按照实际写入的日志量加上占用的<code>log buffer header</code>和<code>log buffer trailer</code>来计算的。</p>
 <p>如下图：<code>buf_free</code>用来标记下一条redo日志应该写到<code>log buffer</code>中的哪个位置。</p>
 <p><code>MTR1</code>写完以后，对于<code>MTR2</code>，一个页面装不下，跨页了，此时，<code>lsn</code>的偏移量应该加上第一个<code>block</code>的 <code>log block trailer</code>和第二个<code>block</code>的<code>log block header</code>。</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240418233324254.png" alt="image-20240418233324254"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240418233324254.png" alt="image-20240418233324254"></p>
 <blockquote>
 <p>每一组由<code>MTR</code>生成的redo日志都有一个唯一的<code>lsn</code>值与其对应；<code>lsn</code>值越小，说明<code>redo</code>日志产生得越早。</p>
 </blockquote>
@@ -633,7 +633,7 @@
 <p>随着系统的运行，<code>flushed_to_disk_lsn</code>的值，会逐渐被<code>lsn</code>甩开。因为先写log buffer，再刷新磁盘，毕竟磁盘的刷新没那么快，也没那么及时</p>
 <p>他们的关系如下图：</p>
 <p><code>buf_next_to_write</code>表示下一段将要刷新到磁盘的偏移量</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240419000257852.png" alt="image-20240419000257852"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240419000257852.png" alt="image-20240419000257852"></p>
 <blockquote>
 <p>个人理解：<code>flushed_to_disk_lsn</code>是全局累加的，记录系统总共刷新了多少日志量。</p>
 <p>但是<code>buf_next_to_write</code>是一个指针，用于记录当前刷新到了哪里，随着log buffer清空，这个值也会被复位，指向log buffer开头</p>
@@ -702,7 +702,7 @@
 <p>insert语句导致的结果就是插入了一条记录，回滚操作就是把这条记录删除就好了。所以我们只要把这条记录的主键信息记录上就好了</p>
 </blockquote>
 <p><code>MySql</code>类型为<code>TRX_UNDO_INSERT_REC</code>的<code>undo</code>日志，其完整结构如下</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420135406839.png" alt="image-20240420135406839"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420135406839.png" alt="image-20240420135406839"></p>
 <ul>
 <li><code>undo no</code>：在一个事务是从0开始递增的。事务没提交时，每生成一条undo日志，那么该条日志的undo no就加1</li>
 <li><code>table id</code>：每个表都会分配一个唯一的<code>table id</code>，可以通过<code>infomation_schema</code>的<code>innodb_sys_tables</code>表来查看对应的<code>table id</code></li>
@@ -713,23 +713,23 @@
 </blockquote>
 <p><strong>by the way</strong>：<code>innodb</code>行格式</p>
 <p>聚簇索引的记录除了会记录完整的用户数据以外，还会记录几个隐藏列：</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420135942889.png" alt="image-20240420135942889"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420135942889.png" alt="image-20240420135942889"></p>
 <blockquote>
 <p>row_id就是隐藏id，不是必须的</p>
 </blockquote>
 <p>这个<code>roll_pointer</code>，其实本质就是一个指向记录对应的undo日志指针。</p>
 <p>当我们在一次事务中，插入了两条记录后，假如分配的事务id为100，其对应的关系如下图</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420141005150.png" alt="image-20240420141005150"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420141005150.png" alt="image-20240420141005150"></p>
 <h2 id="delete操作对应的undo日志"><a href="#delete操作对应的undo日志" class="headerlink" title="delete操作对应的undo日志"></a>delete操作对应的undo日志</h2><p>数据页中的数据会根据记录头中的<code>next_record</code>属性组成一个单向链表。</p>
 <p>被删除的记录也会根据记录头中的<code>next_record</code>属性组成一个链表，不过这个链表中的记录占用的存储空间可以被重新利用，所以这个链表也被称为<strong>垃圾链表</strong></p>
 <p>Page Header部分中有一个名为<code>PAGE FREE</code>的属性，它指向垃圾链表的头节点</p>
-<img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420142227528.png" alt="image-20240420142227528" style="zoom:80%;">
+<img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420142227528.png" alt="image-20240420142227528" style="zoom:80%;">
 
 
 
 <p>数据行中的记录头信息中，有一个<code>delete_flag</code>标识，用来标记数据是否被删除。</p>
 <p>假如现在数据状态如下：</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420143626870.png" alt="image-20240420143626870"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420143626870.png" alt="image-20240420143626870"></p>
 <p>我们要把正常记录的最后一条记录删掉，这个删除过程需要经历两个过程</p>
 <ul>
 <li><p>阶段1：仅仅将该记录的<code>delete_flag</code>标识位设置为1。这个过程称为<strong>delete mark</strong></p>
@@ -738,7 +738,7 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420144120007.png" alt="image-20240420144120007"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420144120007.png" alt="image-20240420144120007"></p>
 <ul>
 <li><p>阶段2：当该删除语句提交事务后，会有专门的线程来真正地把记录删除掉（也就是将记录移到垃圾链表）。这个过程阶段称为<strong>purge</strong></p>
 <blockquote>
@@ -746,11 +746,11 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420144551844.png" alt="image-20240420144551844"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420144551844.png" alt="image-20240420144551844"></p>
 <p>在阶段2执行完成之后，这条记录就算是被真正删除了，占用的存储空间也就可以被重新利用了。</p>
 <p>事务一旦提交，也就不需要考虑回滚的事了，所以只需要针对第一阶段<code>delete mark</code>进行回滚就好了</p>
 <p><code>MySql</code>设计了一种名为<code>TRX_UNDO_DEL_MARK_REC</code>类型的undo日志</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420150428571.png" alt="image-20240420150428571"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420150428571.png" alt="image-20240420150428571"></p>
 <ul>
 <li><p>在对一条记录进行delete mark操作之前，需要把该记录的<code>trx_id</code>和<code>roll_pointer</code>隐藏列的旧值都记录到对应的undo日志中的 <code>trx_id</code> 和 <code>roll_pointer</code>属性中。</p>
 <blockquote>
@@ -781,7 +781,7 @@
 <p>针对这种不更新主键的情况（包括上面两种情况），<code>MySql</code>设计了一种类型为<code>TRX_UNDO_UPD_EXIST_REC</code>类型的undo日志</p>
 </li>
 </ul>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420154213392.png" alt="image-20240420154213392"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420154213392.png" alt="image-20240420154213392"></p>
 <blockquote>
 <p>如果update语句中更新的列包含了索引列，那么就会添加”索引列各列信息”这个部分，否则不会添加这个部分</p>
 </blockquote>
@@ -803,9 +803,9 @@
 <li>根据更新后各列的值，创建一条新的二级索引记录，插入到二级索引中</li>
 </ol>
 <h2 id="FIL-PAGE-UNDO-LOG"><a href="#FIL-PAGE-UNDO-LOG" class="headerlink" title="FIL_PAGE_UNDO_LOG"></a>FIL_PAGE_UNDO_LOG</h2><p>undo日志存放在类型为 <code>FIL_PAGE_UNDO_LOG</code>的页面中。这种页面的通用结构如下：</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420215420389.png" alt="image-20240420215420389"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420215420389.png" alt="image-20240420215420389"></p>
 <h3 id="Undo-Page-Header"><a href="#Undo-Page-Header" class="headerlink" title="Undo Page Header"></a>Undo Page Header</h3><p>Undo Page Header是undo日志独有的，结构如下</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420215801433.png" alt="image-20240420215801433"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420215801433.png" alt="image-20240420215801433"></p>
 <ul>
 <li><p><code>TRX_UNDO_PAGE_TYPE</code>：本页面存放的undo日志类型</p>
 <p>undo日志主要分为两个大类</p>
@@ -826,7 +826,7 @@
 <p>一个事务执行过程中，可能会混合执行多种类型的语句，产生不同类型的undo日志。但是一个undo页面只能存储一个类型的undo日志。</p>
 <p>所以一个事务的执行过程中，可能需要两个undo页面的链表。一条<code>insert undo</code>链表，另一条称为<code>unpdate undo</code>链表。</p>
 <p>在对普通表和用户临时表的记录改动时所产生的undo日志要分别记录。所以一个事务最多有4个以undo页面为节点组成的链表。</p>
-<p><img src="/colinstar/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420230059192.png" alt="image-20240420230059192"></p>
+<p><img src="/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/typora-user-images\MySql的日志\image-20240420230059192.png" alt="image-20240420230059192"></p>
 
       
     </div>
@@ -836,7 +836,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://c89757.gitee.io/colinstar/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/" title="MySql的日志" target="_blank" rel="external">http://c89757.gitee.io/colinstar/2024/04/14/MySql的日志/</a>
+      <a href="https://c89757.github.io/2024/04/14/MySql%E7%9A%84%E6%97%A5%E5%BF%97/" title="MySql的日志" target="_blank" rel="external">https://c89757.github.io/2024/04/14/MySql的日志/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -851,7 +851,7 @@
     <figure class="media">
       <div class="media-left">
         <a href="https://gitee.com/c89757" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/colinstar/images/avatar.jpg" class="img-rounded w-full" alt="">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
         </a>
       </div>
       <div class="media-body">
@@ -881,12 +881,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/colinstar/2024/04/17/MySql%E5%A2%9E%E5%8A%A0varchar%E9%95%BF%E5%BA%A6/" title="MySql增加varchar长度"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2024/04/17/MySql%E5%A2%9E%E5%8A%A0varchar%E9%95%BF%E5%BA%A6/" title="MySql增加varchar长度"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/colinstar/2024/04/14/MySql-BufferPool/" title="InnoDB-BufferPool"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2024/04/14/MySql-BufferPool/" title="InnoDB-BufferPool"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
@@ -928,7 +928,7 @@
         
         <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
         
-        <li><a href="/colinstar/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
         
     </ul>
 
@@ -946,10 +946,10 @@
 window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
 
-<script src="/colinstar/js/plugin.min.js"></script>
+<script src="/js/plugin.min.js"></script>
 
 
-<script src="/colinstar/js/application.js"></script>
+<script src="/js/application.js"></script>
 
 
     <script>
@@ -962,14 +962,14 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
             TAGS: '标签',
             UNTITLED: '(未命名)',
         },
-        ROOT_URL: '/colinstar/',
-        CONTENT_URL: '/colinstar/content.json',
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
     };
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
 
-<script src="/colinstar/js/insight.js"></script>
+<script src="/js/insight.js"></script>
 
 
 
